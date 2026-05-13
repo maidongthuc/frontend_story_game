@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 1.2</title>
+</head>
+<body>
+  <main id="page-content" class="flex-1 flex flex-col items-center pt-32 pb-[120px] px-gutter w-full max-w-[1280px] mx-auto">
+    <div class="w-full text-center mb-xl max-w-3xl">
+      <h1 class="font-h1-display text-h1-display text-on-surface mb-sm tracking-tight">Khởi tạo câu chuyện</h1>
+      <p class="font-ui-main text-ui-main text-on-surface-variant">Chọn nhân vật, bối cảnh và phong cách. AI sẽ viết Chương 1 và đề xuất các ngã rẽ tiếp theo cho hành trình.</p>
+      <div class="flex items-center justify-center gap-sm mt-lg">
+        <div class="flex items-center gap-xs text-primary">
+          <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-ui-caption text-ui-caption font-bold">1</div>
+          <span class="font-ui-label text-ui-label font-bold">Thiết lập</span>
+        </div>
+        <div class="w-12 h-px bg-outline-variant/50"></div>
+        <div class="flex items-center gap-xs text-on-surface-variant opacity-60">
+          <div class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center font-ui-caption text-ui-caption">2</div>
+          <span class="font-ui-label text-ui-label">Tạo Chương 1</span>
+        </div>
+        <div class="w-12 h-px bg-outline-variant/50"></div>
+        <div class="flex items-center gap-xs text-on-surface-variant opacity-60">
+          <div class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center font-ui-caption text-ui-caption">3</div>
+          <span class="font-ui-label text-ui-label">Hướng đi</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col lg:flex-row gap-xl items-start">
+      <div class="flex-1 w-full space-y-lg">
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50">
+          <label class="block font-h3-section text-h3-section text-on-surface mb-sm">Tên nhân vật</label>
+          <input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm font-ui-main text-ui-main text-on-surface focus:outline-none focus:border-[#123A32] focus:ring-1 focus:ring-[#123A32] transition-colors" type="text" value="Linh"/>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50">
+          <label class="block font-h3-section text-h3-section text-on-surface mb-sm">Giới tính nhân vật</label>
+          <div class="flex flex-wrap gap-sm">
+            <button class="px-md py-sm rounded-full border border-[#DADDE2] bg-surface-container-lowest font-ui-label text-ui-label text-on-surface-variant hover:border-[#123A32] transition-colors">Nam</button>
+            <button class="px-md py-sm rounded-full border-[1.5px] border-[#123A32] bg-[#E9F3EA] font-ui-label text-ui-label text-[#123A32] transition-colors">Nữ</button>
+            <button class="px-md py-sm rounded-full border border-[#DADDE2] bg-surface-container-lowest font-ui-label text-ui-label text-on-surface-variant hover:border-[#123A32] transition-colors">Phi nhị nguyên mẫu</button>
+            <button class="px-md py-sm rounded-full border border-[#DADDE2] bg-surface-container-lowest font-ui-label text-ui-label text-on-surface-variant hover:border-[#123A32] transition-colors">Tùy chỉnh</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+          <div class="relative">
+            <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50 cursor-pointer hover:border-[#123A32] transition-colors flex justify-between items-center group">
+              <div>
+                <label class="block font-ui-caption text-ui-caption text-on-surface-variant mb-[2px] cursor-pointer">Thể loại</label>
+                <div class="font-ui-main text-ui-main text-on-surface font-medium">Fantasy</div>
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant group-hover:text-[#123A32] transition-colors">expand_more</span>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <div class="bg-surface-container-lowest rounded-xl p-md border-[1.5px] border-[#123A32] cursor-pointer flex justify-between items-center rounded-b-none shadow-sm">
+              <div>
+                <label class="block font-ui-caption text-ui-caption text-[#123A32] mb-[2px] cursor-pointer">Thời đại</label>
+                <div class="font-ui-main text-ui-main text-on-surface font-medium">Trung cổ</div>
+              </div>
+              <span class="material-symbols-outlined text-[#123A32]">expand_less</span>
+            </div>
+            <div class="absolute top-full left-0 w-full bg-surface-container-lowest border border-outline-variant/50 border-t-0 rounded-b-xl shadow-lg overflow-hidden py-sm">
+              <button class="w-full text-left px-md py-sm font-ui-main text-ui-main text-on-surface hover:bg-surface-variant transition-colors">Cổ đại</button>
+              <button class="w-full text-left px-md py-sm font-ui-main text-ui-main text-[#123A32] bg-[#E9F3EA] font-medium transition-colors flex justify-between items-center">Trung cổ <span class="material-symbols-outlined text-[18px]">check</span></button>
+              <button class="w-full text-left px-md py-sm font-ui-main text-ui-main text-on-surface hover:bg-surface-variant transition-colors">Hiện đại</button>
+              <button class="w-full text-left px-md py-sm font-ui-main text-ui-main text-on-surface hover:bg-surface-variant transition-colors">Tương lai</button>
+              <button class="w-full text-left px-md py-sm font-ui-main text-ui-main text-on-surface hover:bg-surface-variant transition-colors">Hậu tận thế</button>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50 cursor-pointer hover:border-[#123A32] transition-colors flex justify-between items-center group">
+              <div>
+                <label class="block font-ui-caption text-ui-caption text-on-surface-variant mb-[2px] cursor-pointer">Bối cảnh</label>
+                <div class="font-ui-main text-ui-main text-on-surface font-medium">Vùng đất bị lãng quên</div>
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant group-hover:text-[#123A32] transition-colors">expand_more</span>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50 cursor-pointer hover:border-[#123A32] transition-colors flex justify-between items-center group">
+              <div>
+                <label class="block font-ui-caption text-ui-caption text-on-surface-variant mb-[2px] cursor-pointer">Phong cách kể chuyện</label>
+                <div class="font-ui-main text-ui-main text-on-surface font-medium">Điện ảnh</div>
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant group-hover:text-[#123A32] transition-colors">expand_more</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/50">
+          <label class="block font-h3-section text-h3-section text-on-surface mb-sm">Ý tưởng nội dung câu chuyện</label>
+          <textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm font-ui-main text-ui-main text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors min-h-[100px] resize-none" placeholder="Ví dụ: Một nữ hiệp sĩ thất lạc ký ức phải tìm lại thân phận trong vương quốc đang sụp đổ..."></textarea>
+          <p class="mt-sm font-ui-caption text-ui-caption text-on-surface-variant">AI sẽ ưu tiên bối cảnh và xung đột bạn nhập ở đây.</p>
+        </div>
+
+        <div class="flex items-center gap-md pt-sm">
+          <button class="bg-[#D85C3A] text-white px-xl py-sm rounded-full font-ui-label text-ui-label font-bold flex items-center gap-xs hover:bg-opacity-90 transition-opacity">
+            <span class="material-symbols-outlined text-[18px]">temp_preferences_custom</span>
+            Tạo Chương 1
+          </button>
+          <button class="border border-[#123A32] text-on-surface px-lg py-sm rounded-full font-ui-label text-ui-label hover:bg-surface-variant transition-colors">
+            Đặt lại
+          </button>
+          <span class="font-ui-caption text-ui-caption text-on-surface-variant ml-auto hidden sm:block">Bạn có thể sửa thiết lập trước khi tạo chương đầu tiên.</span>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-[400px] shrink-0 sticky top-[88px]">
+        <div class="bg-[#0F1720] rounded-xl p-lg border border-[#313942] text-white shadow-2xl overflow-hidden relative">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-[#D85C3A] opacity-10 blur-[50px] rounded-full pointer-events-none"></div>
+          <div class="flex items-center gap-sm mb-md border-b border-[#313942] pb-sm">
+            <span class="material-symbols-outlined text-[#D85C3A] text-[20px]" style="font-variation-settings: 'wght' 200;">terminal</span>
+            <h2 class="font-h3-section text-h3-section text-white uppercase tracking-wider text-[14px]">Hồ sơ nhân vật</h2>
+          </div>
+          <div class="space-y-md font-ui-main text-ui-main">
+            <div>
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Tên</span>
+              <span class="text-white font-bold">Linh</span>
+            </div>
+            <div>
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Giới tính</span>
+              <span class="text-white">Nữ</span>
+            </div>
+            <div class="grid grid-cols-2 gap-sm">
+              <div>
+                <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Thể loại</span>
+                <span class="text-white">Fantasy</span>
+              </div>
+              <div>
+                <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Thời đại</span>
+                <span class="text-white">Trung cổ</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Bối cảnh</span>
+              <span class="text-white">Vùng đất bị lãng quên</span>
+            </div>
+            <div>
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Phong cách</span>
+              <span class="text-white">Điện ảnh</span>
+            </div>
+            <div>
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-xs">Ý tưởng</span>
+              <span class="text-white/40 italic text-[14px]">Đang chờ nhập liệu...</span>
+            </div>
+            <div class="pt-sm border-t border-[#313942]">
+              <span class="text-white/50 text-[12px] uppercase tracking-wider block mb-sm">Phân tích cảm xúc (Dự kiến)</span>
+              <div class="flex flex-wrap gap-xs">
+                <span class="px-sm py-xs border border-white/20 rounded text-[12px] text-white/80">Bí ẩn</span>
+                <span class="px-sm py-xs border border-[#D85C3A]/40 bg-[#D85C3A]/10 rounded text-[12px] text-[#D85C3A]">Hiểm nguy</span>
+                <span class="px-sm py-xs border border-white/20 rounded text-[12px] text-white/80">Hy vọng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-md flex items-center gap-sm text-on-surface-variant/60 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-sm opacity-50">
+          <span class="material-symbols-outlined text-[16px] animate-pulse">edit_square</span>
+          <span class="font-ui-caption text-ui-caption">Đang viết Chương 1...</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (async function renderPage() {
+      const contentNode = document.getElementById("page-content");
+      const contentHtml = contentNode ? contentNode.outerHTML : "";
+      const layoutRes = await fetch("header_footer.html");
+      const layoutHtml = await layoutRes.text();
+      const merged = layoutHtml.replace(
+        /<!-- HOME_CONTENT_START -->[\s\S]*?<!-- HOME_CONTENT_END -->/,
+        "<!-- HOME_CONTENT_START -->\n" + contentHtml + "\n<!-- HOME_CONTENT_END -->"
+      );
+      document.open();
+      document.write(merged);
+      document.close();
+    })();
+  </script>
+</body>
+</html>
