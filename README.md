@@ -11,3 +11,7 @@
 ## page_2
 
 ![page_2](downloads/stitch/images/page_2.png)
+
+## page_3
+
+![page_3](downloads/stitch/images/page_3.png)
