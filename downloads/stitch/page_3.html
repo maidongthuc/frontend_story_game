@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-highest": "#f4ded8",
+                        "surface-bright": "#fff8f6",
+                        "tertiary-container": "#008091",
+                        "inverse-on-surface": "#ffede9",
+                        "on-tertiary-fixed-variant": "#004e59",
+                        "on-surface": "#251916",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-fixed": "#001f25",
+                        "inverse-surface": "#3b2d2a",
+                        "surface": "#fff8f6",
+                        "on-primary-fixed-variant": "#862203",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#a7391a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#c54e2e",
+                        "background": "#fff8f6",
+                        "surface-variant": "#f4ded8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#446a60",
+                        "outline": "#8b716a",
+                        "on-tertiary-container": "#f8fdff",
+                        "on-primary-fixed": "#3b0800",
+                        "on-error": "#ffffff",
+                        "on-background": "#251916",
+                        "surface-dim": "#ecd5d0",
+                        "surface-container": "#ffe9e4",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#58423c",
+                        "on-secondary-fixed-variant": "#274d45",
+                        "tertiary-fixed-dim": "#6cd5e9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#a1efff",
+                        "inverse-primary": "#ffb5a1",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "tertiary": "#006673",
+                        "secondary-fixed-dim": "#a6cfc3",
+                        "primary": "#a43718",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#bfe8dc",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#3f665c",
+                        "primary-fixed": "#ffdbd1",
+                        "on-secondary-fixed": "#00201a",
+                        "surface-container-high": "#fae3de",
+                        "secondary-fixed": "#c2ebdf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "40px",
+                        "container-max": "1120px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "narrative-width": "680px"
+                    },
+                    "fontFamily": {
+                        "narrative-italic": ["Newsreader"],
+                        "ui-caption": ["Space Grotesk"],
+                        "h1-display": ["Space Grotesk"],
+                        "narrative-body": ["Newsreader"],
+                        "h2-title": ["Space Grotesk"],
+                        "ui-main": ["Space Grotesk"],
+                        "ui-label": ["Space Grotesk"],
+                        "h3-section": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "narrative-italic": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "ui-caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "h1-display": ["48px", { "lineHeight": "1.1", "fontWeight": "600" }],
+                        "narrative-body": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h2-title": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "ui-main": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "ui-label": ["14px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "h3-section": ["20px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-surface text-on-surface font-ui-main antialiased min-h-screen">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline fixed top-0 w-full z-40">
+        <div class="flex justify-between items-center px-lg py-md w-full max-w-container-max mx-auto h-16">
+            <div class="flex items-center gap-md">
+                <span
+                    class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150">menu</span>
+                <h1 class="font-h1-display text-primary dark:text-primary-fixed-dim font-bold text-2xl tracking-tight">
+                    Chọn Truyện &amp; Chơi Ngay</h1>
+            </div>
+            <div class="flex items-center gap-md">
+                <span
+                    class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high p-sm rounded-full transition-colors cursor-pointer">search</span>
+                <span
+                    class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high p-sm rounded-full transition-colors cursor-pointer">account_circle</span>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="pt-16 pb-24 lg:pb-12 px-md lg:px-lg max-w-container-max mx-auto">
+        <!-- Header & Toolbar -->
+        <section class="py-xl">
+            <h2 class="font-narrative-body text-4xl lg:text-5xl text-on-surface mb-md">Kho Truyện Có Sẵn</h2>
+            <p class="text-on-surface-variant max-w-narrative-width text-lg">Chọn kịch bản đã được thiết lập sẵn để nhập
+                vai ngay lập tức. Mỗi câu chuyện là một hành trình độc bản được kiến tạo bởi AI.</p>
+            <div class="mt-lg flex flex-wrap items-center gap-md">
+                <div class="relative flex-grow max-w-md">
+                    <span
+                        class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+                    <input
+                        class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-sm pl-10 pr-md focus:border-primary focus:ring-1 focus:ring-primary outline-none text-ui-main transition-colors"
+                        placeholder="Tìm kiếm kịch bản..." type="text" />
+                </div>
+                <div class="flex items-center gap-sm overflow-x-auto pb-sm lg:pb-0">
+                    <button
+                        class="flex items-center gap-xs border border-outline-variant rounded-full px-md py-sm text-sm hover:border-primary transition-colors whitespace-nowrap">Thể
+                        loại <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span></button>
+                    <button
+                        class="flex items-center gap-xs border border-outline-variant rounded-full px-md py-sm text-sm hover:border-primary transition-colors whitespace-nowrap">Độ
+                        dài <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span></button>
+                    <button
+                        class="flex items-center gap-xs border border-outline-variant rounded-full px-md py-sm text-sm hover:border-primary transition-colors whitespace-nowrap">Mức
+                        độ nhập vai <span class="material-symbols-outlined text-xs">keyboard_arrow_down</span></button>
+                </div>
+            </div>
+        </section>
+        <!-- Recommended Section -->
+        <section class="mb-xl">
+            <div class="flex items-center justify-between mb-lg">
+                <h3 class="font-h3-section text-on-surface">Đề xuất cho bạn</h3>
+                <a class="text-primary text-sm font-bold hover:underline" href="#">Xem tất cả</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A moody forest"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6thVZZJy4ses1ilLGur_eJISClU1wLZCNQ0F1Whs3gJoxJp_1hNIhPXMMEvy-y3lmO4Ye8460jIW0T2L6lkagqbXhc6INVod8PHpDzMYTbFJGZTeIOnNv-pJaug08eymEjbSBD8bzYTlLPaAZqOAihKU6AMwy6JKObJtkHZPRgwFDR2yQ_gmF8Qdnhx05DAKUTcSF5FJwlEKPVXRFWF0lglxUhSXLOjFCAruIbT2nY3tWYShNnNWokBdFYn4Tfdu7w8Dd9zv5mjVZ" />
+                        <div
+                            class="absolute top-sm right-sm bg-primary text-white text-xs px-md py-xs rounded-full font-bold shadow-sm">
+                            Nổi bật</div>
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Bóng Ma Thành Veridia</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Điều tra vụ mất tích bí ẩn của các
+                            học giả tại thư viện cổ nhất vương quốc.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Fantasy</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Trinh
+                                thám</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Tiếp
+                                tục</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Futuristic neon city"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZBPm5CXJ3D0UO4F4oD7qLROxvHFcPMby2T1XrmFhFgx2yu93wjqO6hnn8nyn6cHAc2oP7u1It2LvwxasiggJjfE12fw_YGDlucjL-UqXEP4hiWoFWyqFUFuRTm1Hw9CgQbaBdBUlTUFjzXbRrsy60kUmBpdhFAYQW3aJMyuFcRtQq-Ky9sQXjHbDejVYmun_7bIwbvr7CC_Rx5qjvQyGrVi-mQYu74nS8Yl7WmLusTvR5CkjtwtKHCVc8iMd0C_TmXviVEJZZCnGW" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Neon Hà Nội: 2077</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Một hacker trẻ vô tình phát hiện
+                            bí mật quốc gia ẩn trong mã nguồn của một ứng dụng phổ biến.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Cyberpunk</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Hành
+                                động</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Chơi
+                                ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Clean lab"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXAbAdzp6Y_GAp9UoobOkpr9f-50zUVjOw4CFo9nkfraq2DBZWuiPPJHJt41rFGeXw0gVSFjnkmAjIG48YC2UTQS0PpQZxfIGWKnvgDTsY4o_rxexKZ-uw1tUqlsWS2Z0qIAd3j5f9p6NcV-8dGnQkUXUqJgEQO7zeCDuIfHmBrPV-Y9FgMM3J8OEJzq_Kyv_gQsB2npnNOCDja9qTlYSSWLYLGvNr58vrcMZunp67g1oFYuUus8Y7TC4aFoMPSW9AhgqV_p1BX1_B" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Dự Án Genesis</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Khi AI bắt đầu mơ về những giấc mơ
+                            của con người, ai sẽ là người định nghĩa thực tại?</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Sci-Fi</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Triết
+                                lý</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Chơi
+                                ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Grid - All kịch bản -->
+        <section class="mb-xl">
+            <div class="flex items-center justify-between mb-lg">
+                <h3 class="font-h3-section text-on-surface">Tất cả kịch bản</h3>
+                <div class="flex gap-sm items-center text-on-surface-variant text-sm">
+                    <span>Sắp xếp:</span>
+                    <button class="font-bold text-primary flex items-center gap-xs">Mới nhất <span
+                            class="material-symbols-outlined text-xs">sort</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <!-- Grid Card 1 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Abstract red lines"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBax82JjHGBMzXFovZ4MYiZjs-8kWO7L20fXqBxW_F6lwi1FWRePoPLaZYxneeCHZcqM8hR0DhRwlu8bQv5aQPNnjs1UQN2ZtkLic9ciWO4lHrvteM6-oB5lcHF6K_Ef_1G5Qf-5BLx02HhwVnZVgLLVDfuKcXiRiPjNP8yBMonrK4HwSFqbf0sdZ8dvZ2ISbPW4_Bz79nEWPCR2H5aAzbeIY-W2I4FLk1ht9KomiNGIDhabe5v9QCqBZS81G6DcP97nFlCjvZ0-f8b" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Mật Mã Enigma</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Giải mã chuỗi ký tự bí ẩn cứu lấy
+                            hệ thống cốt lõi.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Thriller</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Kịch
+                                tính</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Chơi
+                                ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid Card 2 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Ancient ruins"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsjf8sorKDIRosYgR_CEAoyMOyqOe6JEUdHzfd3cT-3UHvUDXQbYQqnDQ2SoLIbfIGh4EsVydRggk-KcnHZRKVjdQ47tte-EOvbmPw1ehLX-0ou3gHf2mfWQp9qCA8kLSY9YIyd4j2oRvI_duZGPt5wcjCRyZlArMc2YQaZuzXGT5McBs46ALwC6uizxBKEWZ1-FUID_q9ifuQDR6OY93vcWiYT7hZh9q1ei-h4tyD3Gt3bJ1D9Y9LsdUmq9NQR-9OWmY8uXlq4x_g" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Ký Ức Đánh Rơi</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Tìm lại quá khứ trong một thị trấn
+                            bị lãng quên.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Drama</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Tình
+                                cảm</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Tiếp
+                                tục</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid Card 3 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Cozy study"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZeyF8tVExybdbC9v3v-RzlIoJ1ntv2Ms-E4Z8_9ppjZpy_RqaNa3EVhYInzfBwhjuD2iLtjjSlWc6uuQWrK6iNV6uYKroJJ6gJvMipIwBKRnKDJfKDLx_MmGAtuf26xkQKldz11PqJ-Z6rFU4xPrhSnWcpV1s10A0fq0qw8m3QMV5GL750bPF9vCqgT2wEcvGxTGBv0-JVGxlWFQGYAsW8mAvLbvhZ2ENHNJVEw0XY_v8g-YPD-5BQdFNM6PwB-j01uYtQTe4d0v" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Lời Nguyền Cổ Vật</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Hóa thân thành giáo sư khảo cổ
+                            trong một đêm định mệnh.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Mystery</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Kỳ
+                                ảo</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Chơi
+                                ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid Card 4 -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Deep space"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBldWwe78Aytv4PcdiEAsNXLVTkWhTGreggQEkHq6grqTv8eIJZYU1cT1NhtoF7jpvS62mvHSdLPf97hd5hoD3IqHPUIf2mCdlB8rfE2aMIiIVOzlSzb7sdHTFJs8Wvi_MoH2NImK887y7VgjbsuRV3V30V_FlkKYWopeHaB2VsXZM3ehY-4ddKLalMqrmlLzOOOXwoYgDm15aiSVzagKVHDhuV-WbtllV1Db8Ac5mLIPagZRIQslitJ5acF4swg5F7GGRVLr1qX4Zx" />
+                    </div>
+                    <div class="p-md">
+                        <h4 class="font-h2-title text-xl text-on-surface mb-xs">Chuyến Tàu Số 0</h4>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Chuyến hành trình không hồi kết
+                            xuyên không gian.</p>
+                        <div class="flex flex-wrap gap-xs mb-lg">
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Space</span>
+                            <span
+                                class="bg-surface-container-highest text-on-surface-variant text-[10px] px-sm py-1 rounded uppercase tracking-wider font-bold">Phiêu
+                                lưu</span>
+                        </div>
+                        <div class="flex gap-sm">
+                            <button
+                                class="flex-grow bg-primary text-on-primary py-sm rounded-full text-sm font-bold hover:opacity-90 active:scale-95 transition-all">Chơi
+                                ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- New Dedicated Create Section -->
+    </main>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="lg:hidden fixed bottom-0 w-full z-50 flex justify-around items-center py-sm px-md bg-surface dark:bg-surface-dim border-t border-outline-variant dark:border-outline rounded-t-xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1"
+            href="#">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-ui-label">Trang chủ</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">book</span>
+            <span class="text-[10px] font-ui-label">Thư viện</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">auto_stories</span>
+            <span class="text-[10px] font-ui-label">Đang đọc</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-ui-label">Cá nhân</span>
+        </a>
+    </nav>
+    <button
+        class="fixed bottom-24 lg:bottom-10 right-6 lg:right-10 z-[60] flex items-center gap-2 px-6 py-4 rounded-full shadow-2xl transition-all active:scale-95 hover:opacity-90"
+        style="background-color: #D85C3A; color: #ffffff;">
+        <span class="material-symbols-outlined">add</span>
+        <span class="font-bold whitespace-nowrap">Tạo kịch bản mới</span>
+    </button>
+</body>
+
+</html>
